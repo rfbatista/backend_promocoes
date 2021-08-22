@@ -1,5 +1,8 @@
 # Boilerplate for a backend in NodeJs
 
 ## Typescript
+`npm install typescript --save-dev`
 
-# backend-nodejs-boilerplate
+## Express
+`npm install -S express`
+`npm install -D @types/express`
