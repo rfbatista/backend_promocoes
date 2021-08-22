@@ -8,10 +8,12 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "pino": "^7.0.0-rc.3"
   },
   "scripts": {
-    "dev": "ts-node-dev src/index.ts",
-    "start": "ts-node src/index.ts"
+    "dev": "ts-node-dev src/index.ts | pino-pretty",
+    "start": "ts-node src/index.ts | pino-pretty"
   }
 }

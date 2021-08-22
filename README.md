@@ -1,6 +1,5 @@
 # Boilerplate for a backend in NodeJs
 
-
 `npm install -D @types/node`
 
 ## Typescript
@@ -14,3 +13,9 @@ Reduce bundle size with:
 ## Express
 `npm install -S express`
 `npm install -D @types/express`
+
+## Loggin
+`npm install pino@next`
+
+## Environment configuration
+`npm install dotenv`
