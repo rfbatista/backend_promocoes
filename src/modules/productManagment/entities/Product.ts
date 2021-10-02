@@ -2,18 +2,20 @@ import { Entity } from '@shared/BaseEntity';
 import { Guard, IGuardResult } from '@shared/Guard';
 import { Result } from '@shared/Result';
 import { UniqueEntityId } from '@shared/UniqueEntityId';
+import { Categorie } from './Categorie';
 
 type Image = {
   description: string;
   url: string;
 }
 
-export type IProduct = {
+export interface IProduct {
   id?: number;
-  type: string;
-  description: string;
+  name: string;
+  description?: string;
   price: number;
-  images: Image[];
+  categorie?: Categorie;
+  images?: Image[];
   created_at?: Date;
   updated_at?: Date;
 }
@@ -22,17 +24,16 @@ export class Product extends Entity<IProduct> {
   public static create(
     props: IProduct,
     id?: UniqueEntityId
-  ): Result<IProduct> {
+  ): Result<Product> {
     const chatUserPropsResult: IGuardResult = Guard.againstNullOrUndefinedBulk([
-      { argumentName: 'platformName', argument: props.platformName },
-      { argumentName: 'platformUserId', argument: props.platformUserId },
-      { argumentName: 'platformUserName', argument: props.platformUserName },
+      { argumentName: 'price', argument: props.price },
+      { argumentName: 'name', argument: props.name },
     ]);
 
     if (chatUserPropsResult.succeeded) {
-      return Result.ok<ChatUser>(new ChatUser(props, id));
+      return Result.ok<Product>(new Product(props, id));
     } else {
-      return Result.fail<ChatUser>('Missing props in chat user');
+      return Result.fail<Product>('Missing props in PRODUCT');
     }
   }
 }
