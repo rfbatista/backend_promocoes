@@ -7,4 +7,4 @@ export interface ICategorie {
   updated_at?: Date;
 }
 
-export class Categorie extends ValueObject<ICategorie> {}
+export class Category extends ValueObject<ICategorie> {}

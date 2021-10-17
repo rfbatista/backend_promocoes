@@ -1,6 +1,6 @@
 import express from 'express';
 import { AppConfig } from './AppConfig';
-import { Logger } from './Logger';
+import { Logger } from './logger/Logger';
 
 export class HttpServer{
 	static start() {
