@@ -1,6 +1,7 @@
+import { Result } from './Result';
 
-export interface UseCase<T, U> {
-  execute(input: T): U;
+export interface UseCase<Input, Output> {
+  execute(input: Input): Promise<Result<Output>>;
 }
 
 export class UseCaseOutput<T> {

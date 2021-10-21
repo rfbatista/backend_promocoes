@@ -9,6 +9,8 @@
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
     "sourceMap": true,
+    "lib": ["es6"],
+    "types": ["reflect-metadata"],
     "incremental": true,
     "baseUrl": "src",
     "paths": {

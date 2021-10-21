@@ -1,8 +1,7 @@
-import { autoInjectable, inject, injectable, container, singleton } from 'tsyringe';
+import { injectable, inject } from "inversify";
 
-const Service = autoInjectable;
-const Container = container;
+
+const Service = injectable;
 const Inject = inject;
-const Singleton = singleton;
 
-export { Service, Container, Inject, Singleton };
+export { Service, Inject };

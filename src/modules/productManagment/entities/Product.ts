@@ -7,6 +7,7 @@ import { Category as Category } from './Category';
 import { Tag } from './Tag';
 import { Cost } from './Cost';
 import { Organization } from '@modules/organizationManagment/entities/Organization';
+import { Price } from './Price';
 
 type Image = {
   description: string;
@@ -18,7 +19,7 @@ export interface IProduct {
   organization: Organization;
   title: string;
   isPublished: boolean;
-  price: number;
+  price: Price;
   description?: string;
   categories?: Category[];
   images?: Image[];

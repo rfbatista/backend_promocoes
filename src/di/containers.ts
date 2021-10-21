@@ -1,16 +1,6 @@
-import { container, Lifecycle } from 'tsyringe';
+import { Container } from 'inversify';
 import DI from './di.types';
 
-
-const register = async () => {
-};
-
-const resolve = () => {
-};
-
-const DIConfig = async () => {
-  register();
-  resolve();
-};
+const DIConfig = new Container()
 
 export default DIConfig;
