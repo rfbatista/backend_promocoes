@@ -1,7 +1,8 @@
 import pino from 'pino'
-import { AppConfig } from './AppConfig';
-import {BaseError} from "./error/BaseError";
 import os from "os";
+import { Service } from 'typedi';
+import { AppConfig } from '@infrastructure/AppConfig';
+import { BaseError } from '@infrastructure/error/BaseError';
 
 export enum LoggerLevel {
   fatal = "fatal",
@@ -13,6 +14,7 @@ export enum LoggerLevel {
   silent = "silent"
 }
 
+@Service()
 export class Logger {
 
   public static fixed: any;

@@ -1,7 +1,6 @@
-import { injectable, inject } from "inversify";
+import { Service as TypeDiService } from 'typedi';
 
-
-const Service = injectable;
-const Inject = inject;
+const Service = TypeDiService;
+const Inject = undefined;
 
 export { Service, Inject };

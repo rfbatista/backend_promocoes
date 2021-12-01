@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:13-alpine
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: kgen 
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: kgen-data
+    volumes:
+      - ./data:/var/lib/postgresql/data\
